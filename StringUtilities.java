@@ -71,6 +71,11 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+        String[] last = sentence.split(" ");
+        
+        String lastWord = last[last.length-1];
+        return lastWord;
+        
+        
     }
 }
