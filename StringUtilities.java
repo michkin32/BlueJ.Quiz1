@@ -14,7 +14,8 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String answer = baseValue + valueToBeAdded;
+        return answer;
     }
 
     /**
@@ -23,8 +24,11 @@ public class StringUtilities {
      */
     public String reverse(String valueToBeReversed) {
         String reversedString = "";
-        for (int i = 0; i < valueToBeReversed.length - 1; )
-        return null;
+        for (int i = valueToBeReversed.length() -1; i >= 0;i-- ){
+        reversedString = reversedString + valueToBeReversed.charAt(i);
+        }
+        
+        return reversedString;
     }
 
     /**
@@ -32,7 +36,12 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+        Integer wordLength = Math.round((word.length() / 2));
+        //Integer middleCharNum = Math.round(wordLength);
+        //int i = middleCharNum;
+        
+        Character answer = word.charAt(wordLength);
+        return answer;
     }
 
     /**
@@ -41,8 +50,22 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
-    }
+        String answer = " ";
+        for (int i = 0; i >= value.length() -1; i--){
+            
+            if (value.charAt(i) == charToRemove){
+                StringBuilder charRemove = new StringBuilder(value);
+                charRemove.deleteCharAt(i);
+                answer = charRemove.toString();
+            } else{
+            answer.replace(answer.charAt(i), value.charAt(i));
+        
+        }
+            }
+            return answer;
+        }
+        
+    
 
     /**
      * @param sentence String delimited by spaces representative of a sentence
