@@ -5,7 +5,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        return input;
     }
 
     /**
@@ -22,6 +22,8 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
+        String reversedString = "";
+        for (int i = 0; i < valueToBeReversed.length - 1; )
         return null;
     }
 
